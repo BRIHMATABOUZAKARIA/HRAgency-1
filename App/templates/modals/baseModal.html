@@ -1,0 +1,83 @@
+
+
+<!-- Modal (Root) -->
+<div class="modal fade" {% block model-id %}  {% endblock  %} tabindex="-1" aria-labelledby="defaultModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="defaultModalLabel"><i class="fas fa-code"></i>&nbsp;&nbsp; {% block modal-title %}   {% endblock  %}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form method="POST" enctype="multipart/form-data" autocomplete="off">
+        {% csrf_token %}
+          <div class="modal-body">
+<!--             Name input -->
+            <div class="input-group input-group-sm mb-2">
+              <button class="side-label btn border-secondary bg-light" >
+                <i class="fas fa-user-alt"></i>
+              </button>
+              <input type="text" class="form-control" name="name" placeholder="Full name">
+            </div>
+<!--             Age input -->
+            <div class="input-group input-group-sm mb-2">
+              <button class="side-label btn border-secondary bg-light" >
+                <i class="fas fa-universal-access"></i>
+              </button>
+              <input type="text" class="form-control" name="age" placeholder="Your age">
+            </div>
+            <!--             Email input -->
+            <div class="input-group input-group-sm mb-2">
+              <button class="side-label btn border-secondary bg-light" >
+                <i class="fas fa-envelope"></i>
+              </button>
+              <input type="text" class="form-control" name="email" placeholder="Your Email">
+            </div>
+            <!--             Phone input -->
+            <div class="input-group input-group-sm mb-2">
+              <button class="side-label btn border-secondary bg-light" >
+                <i class="fas fa-phone"></i>
+              </button>
+              <input type="text" class="form-control" name="phone" placeholder="Your phone">
+            </div>
+            <!--             Adress input -->
+            <div class="input-group input-group-sm mb-2">
+              <button class="side-label btn border-secondary bg-light" >
+                <i class="fas fa-map-marker-alt"></i>
+              </button>
+              <input type="text" class="form-control" name="address" placeholder="Your address">
+            </div>
+             <!--           experience input -->
+            <div class=" mb-2 mt-3">
+              
+              <textarea  class="form-control" name="experience" rows="3" placeholder="Talk a little about you"> </textarea>
+              
+            </div>
+             <!--           skill input -->
+            <div class=" mb-2 mt-3">
+              
+              <textarea class="form-control" name="skills" rows="3" placeholder="Talk a little about your skills"> </textarea>
+              
+            </div>
+            <hr style="height:2px;">
+            <div class="mb-3">
+              <div class="mb-3" style="font-size:14px;"><i class="fas fa-cloud-upload-alt"></i>&nbsp;&nbsp;Upload your resume</div>
+              <input class="form-control form-control-sm"  name="file"  type="file"
+              accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"  
+                >
+              <div class="form-text" style="font-size:12px;">
+                * Allowed extentions:pdf -doc -docx
+              </div>
+            </div>
+            
+            
+          </div>  
+<!--         Footer Modal -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark btn-sm btn-cancel" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-sm btn-send">Send</button>
+      </div>
+      </form>
+      
+    </div>
+  </div>
+</div>

@@ -50,3 +50,14 @@ html,body {
   border-radius:30px;
   margin-bottom:-50px;
 }
+
+/* Labels with icon (left side  of inputs)  */
+
+.side-label {
+  width:45px;
+}
+
+/* Button inside the modals popup  */
+.btn-cancel,.btn-send {
+  width:65px;
+}

@@ -51,12 +51,15 @@
     </nav>
 </header>
       
-          <!--           Block content (Root) -->
+          <!-- ===== Block content (Root) =====  -->
           {%  block content %}
-      
+           
           {%  endblock content %}
+           {% include 'modals/frontend.html' %}
+           {% include 'modals/backend.html' %}
+           {% include 'modals/fullstack.html' %}
 
-    </div> <!--       End wrapper -->
+    </div> <!--       End // wrapper -->
 
 <!--   Footer -->
   <footer class="bg-dark text-center text-lg-start" id="footer" style="color:#ffff;">
